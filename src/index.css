@@ -1,93 +1,92 @@
 :root {
-    --section-overlay: rgba(0, 0, 0, 0.5)
+  --section-overlay: rgba(102, 97, 97, 0.5);
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
-
 
 .app {
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
 }
-
 .overlay {
-    width: 100%;
-    height: 100vh;
+  width: 100%;
+  height: 100vh;
 }
 
 .container {
-    max-width: 800px;
-    margin: auto;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-    padding: 1rem;
-
+  max-width: 800px;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 1rem;
 }
 
 .section {
-    width: 100%;
-    padding: 1rem;
-    border-radius: 0.4rem;
-    color: white;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  color: white;
 }
 
-.section-inputs, .section-temperature {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--section-overlay);
+.section-inputs,
+.section-temperature {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--section-overlay);
 }
 
-.section-inputs>input {
-    border: 0.8px solid white;
-    border-radius: 0.4rem;
-    background-color: transparent;
-    color: white;
-    padding: 0.5rem;
-    font-size: 20px;
-    font-weight: 200;
+.section-inputs > input {
+  border: 0.8px solid white;
+  border-radius: 0.4rem;
+  background-color: transparent;
+  color: white;
+  padding: 0.5rem;
+  font-size: 20px;
+  font-weight: 200;
 }
 
-.section-inputs>input:focus {
-    outline: none;
+.section-inputs > input:focus {
+  outline: none;
 }
 
-.section-inputs>button {
-    padding: 10px 50px;
-    border: none;
-    border-radius: 0.4rem;
-    font-size: 20px;
-    font-weight: 500;
-    background-color: white;
+.section-inputs > button {
+  padding: 10px 50px;
+  border: none;
+  border-radius: 0.4rem;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: white;
 }
 
-.section-inputs>button:hover {
-    cursor: pointer;
-    background-color: lightgray
+.section-inputs > button:hover {
+  cursor: pointer;
+  background-color: lightgray;
 }
 
 .icon {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.icon>h3 {
-    font-size: 15px;
-    font-weight: 200;
-    text-transform: capitalize;
+.icon > h3 {
+  font-size: 15px;
+  font-weight: 200;
+  text-transform: capitalize;
 }
 
-.temperature>h1 {
-    font-size: 60px
+.temperature > h1 {
+  font-size: 60px;
 }
