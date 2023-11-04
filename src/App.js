@@ -1,3 +1,5 @@
+import WeatherDetails from "./components/WeatherDetails";
+
 function App() {
   return (
 <div className="app" style={{ backgroundImage: `url('https://cdn.britannica.com/49/179449-138-9F4EC401/Overview-Berlin.jpg?w=800&h=450&c=crop')` }}>
@@ -17,7 +19,7 @@ function App() {
               <h1>15 °C</h1>
             </div>
           </div>
-          
+          <WeatherDetails/>
         </div>
       </div>
     </div>
