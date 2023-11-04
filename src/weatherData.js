@@ -1,6 +1,6 @@
 const API_KEY = "4c455cff615f8179bec38b799ffe9a24";
 
-const createIconURL =  (iconid) => `https://openweathermap.org/img/wn/${iconid}@2x.png`
+const createIconURL = (iconid) => `https://openweathermap.org/img/wn/${iconid}@2x.png`;
 
 const getData = async (city, units = "metric") => {
   const URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=${units}`;
@@ -15,6 +15,7 @@ const getData = async (city, units = "metric") => {
     wind: { speed },
     sys: { country },
     name,
+    rain, 
   } = data;
 
   const { description, icon } = weather[0];
@@ -30,6 +31,8 @@ const getData = async (city, units = "metric") => {
     humidity,
     speed,
     country,
+    name,
+    rain: rain ? rain['1h'] : 0, // Precipitation amount in the last hour (default to 0 if not present)
   };
 };
 
