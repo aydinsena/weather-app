@@ -1,6 +1,17 @@
+import { useEffect } from "react";
 import WeatherDetails from "./components/WeatherDetails";
+import { getData } from "./weatherData";
 
 function App() {
+  useEffect(() => {
+    const fetchWeatherData = async () => {
+    const data = await getData('paris');
+    console.log(data)
+  };
+  
+  fetchWeatherData();
+}, []);
+
   return (
 <div className="app" style={{ backgroundImage: `url('https://cdn.britannica.com/49/179449-138-9F4EC401/Overview-Berlin.jpg?w=800&h=450&c=crop')` }}>
       <div className="overlay">
